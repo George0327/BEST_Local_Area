@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainLayout" prefHeight="720.0" prefWidth="1280.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CoreTeamController">
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="65.0" prefWidth="633.0" BorderPane.alignment="CENTER">
+            <children>
+            <Button fx:id="viewDetailsButton" mnemonicParsing="false" onAction="#onViewDetailsButtonClicked" styleClass="secondary-menu-button" stylesheets="@styling.css" text="View Details">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+                <Button fx:id="addCoreTeamButton" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#onAddCoreTeamButtonClicked" prefHeight="25.0" prefWidth="150.0" styleClass="secondary-menu-button" stylesheets="@styling.css" text="Add Core Team">
+                    <HBox.margin>
+                        <Insets right="20.0" />
+                    </HBox.margin>
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../icons/add-user-2-24.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="15.0" />
+                    </padding>
+                </Button>
+            <TextField fx:id="addCoreTeamTextField" promptText="Team Name">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </TextField>
+                <Button fx:id="deleteCoreTeamButton" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#onDeleteCoreTeamButtonClicked" prefWidth="150.0" styleClass="secondary-menu-button" stylesheets="@styling.css" text="Delete Core Team">
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../icons/remove-user-24.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="15.0" />
+                    </padding>
+                </Button>
+            </children>
+            <padding>
+                <Insets left="30.0" />
+            </padding>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="coreteamTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="50.0" text="id" />
+                <TableColumn fx:id="teamnameColumn" prefWidth="120.0" text="Team Name" />
+            <TableColumn fx:id="leaderIdColumn" prefWidth="50.0" text="MO Id" />
+                <TableColumn fx:id="mainorganiserColumn" prefWidth="120.0" text="Main Organiser" />
+                <TableColumn fx:id="projectColumn" prefWidth="120.0" text="Project" />
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

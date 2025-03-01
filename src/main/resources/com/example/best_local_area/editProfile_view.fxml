@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.8" prefWidth="200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EditProfileController">
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="okButton" mnemonicParsing="false" onAction="#onOkButtonClicked" prefHeight="26.0" prefWidth="55.0" text="OK">
+                    <HBox.margin>
+                        <Insets right="20.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancelButtonClicked" prefHeight="26.0" prefWidth="55.0" text="Cancel" />
+            </children>
+        </HBox>
+    </bottom>
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_LEFT">
+            <children>
+                <Label text="First Name">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin></Label>
+                <TextField fx:id="firstNameTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="175.0">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin></TextField>
+                <Label text="Last Name" />
+                <TextField fx:id="lastNameTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="175.0">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin></TextField>
+                <Label text="Birthdate" />
+                <DatePicker fx:id="birthdayDatePicker">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin></DatePicker>
+                <Label text="Email" />
+                <TextField fx:id="emailTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="175.0">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin></TextField>
+                <Label text="Phone Number" />
+                <TextField fx:id="phoneTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="175.0">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </TextField>
+            <Label text="Username" />
+            <TextField fx:id="usernameTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="175.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin></TextField>
+            <Label text="Password" />
+            <TextField fx:id="passwordTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="175.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </TextField>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+   <children>
+      <BorderPane fx:id="mainLayout" layoutX="-7.0" layoutY="-10.0" prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <BorderPane fx:id="commonMenu" prefHeight="425.0" prefWidth="167.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+               <bottom>
+                  <HBox fx:id="exitFooter" alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="200.0" style="-fx-background-color: #6C2E51;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="exitButton" mnemonicParsing="false" onAction="#onExitButtonClick" style="-fx-background-color: #6C2E51;">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../icons/x-mark-4-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets left="4.0" />
+                           </HBox.margin>
+                           <tooltip>
+                              <Tooltip text="Exit" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="signOutButton" mnemonicParsing="false" onAction="#onSignOutButtonClick" style="-fx-background-color: #6C2E51;">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../icons/logout-24.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <tooltip>
+                              <Tooltip text="Sign out" />
+                           </tooltip>
+                        </Button>
+                     </children>
+                  </HBox>
+               </bottom>
+               <center>
+                  <VBox prefHeight="378.0" prefWidth="167.0" style="-fx-background-color: #815395;" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                     <children>
+                        <Button fx:id="homeButton" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="167.0" styleClass="menu-button" stylesheets="@styling.css" text="Home" textAlignment="CENTER" textFill="#131313">
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../icons/home-2-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding></Button>
+                        <Button fx:id="profileButton" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#onProfileButtonClick" styleClass="menu-button" stylesheets="@styling.css" text="Profile">
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../icons/contacts-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding></Button>
+                        <Button fx:id="volunteersButton" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#onVolunteersButtonClick" styleClass="menu-button" stylesheets="@styling.css" text="Volunteers">
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../icons/conference-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding></Button>
+                        <Button fx:id="coreTeamsButton" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#onCoreTeamsButtonClick" styleClass="menu-button" stylesheets="@styling.css" text="CoreTeams">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../icons/group-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="departmentsButton" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#onDepartmentsButtonClick" styleClass="menu-button" stylesheets="@styling.css" text="Departments">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../icons/businessman-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="projectsButton" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#onProjectsButtonClick" styleClass="menu-button" stylesheets="@styling.css" text="Projects">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../icons/pages-1-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="companiesButton" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#onCompaniesButtonClick" styleClass="menu-button" stylesheets="@styling.css" text="Companies">
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../icons/organization-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="editUsersButton" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#onEditUsersButtonClick" styleClass="menu-button" stylesheets="@styling.css" text="Edit users">
+                           <graphic>
+                              <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../icons/edit-user-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="424.8" prefWidth="632.8" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <BorderPane prefHeight="75.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <center>
+                  <HBox fx:id="commonHeader" alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="800.0" style="-fx-background-color: #512E6C;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label graphicTextGap="18.0" prefHeight="62.0" prefWidth="560.0" text="BEST Local Area" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../icons/Best_logo_bun.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Bookshelf Symbol 7" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </HBox>
+               </center>
+               <right>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="300.0" style="-fx-background-color: #512E6C;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="firstNameLabel" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lastNameLabel" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="roleLabel" textFill="WHITE" />
+                     </children>
+                     <padding>
+                        <Insets right="30.0" />
+                     </padding>
+                  </VBox>
+               </right>
+            </BorderPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

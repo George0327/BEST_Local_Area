@@ -1,0 +1,38 @@
+.shadowed-vbox {
+    -fx-effect: dropshadow(gaussian, #000000, 20, 0, 0, 0);
+    -fx-background-color: #815395;
+}
+
+.shadowed-button{
+    -fx-effect: dropshadow(gaussian, #333333, 20, 0, 0, 0);
+    -fx-background-color: #512E6C;
+}
+
+.button:hover {
+    -fx-background-color: #704088;
+}
+
+.button:pressed {
+    -fx-background-color: #3D1F46;
+}
+
+.tooltip {
+    -fx-background-color: #2A2A2A; /* Tooltip background color */
+    -fx-text-fill: white; /* Tooltip text color */
+    -fx-font-size: 12px; /* Tooltip font size */
+    -fx-padding: 5px; /* Padding around the tooltip text */
+}
+
+.menu-button{
+    -fx-background-color: #815395;
+    -fx-text-fill: white;
+    -fx-pref-height: 35;
+    -fx-pref-width: 167;
+}
+
+.secondary-menu-button{
+    -fx-background-color: #815395;
+    -fx-text-fill: white;
+    -fx-pref-height: 25;
+    -fx-pref-width: 150;
+}
